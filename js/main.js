@@ -12,6 +12,8 @@ function cadastraVeiculo(e){
         carro = { // OBJETO
             modelo: modeloCarro,
             placa: placaCarro,
+            dia: time.getDate(),
+            mes: time.getMonth(),
             hora: time.getHours(),
             minutos: time.getMinutes()
         }
@@ -57,13 +59,20 @@ function mostraPatio(){
     for(let i=0; i<carros.length; i++){
         let modelo = carros[i].modelo;
         let placa = carros[i].placa;
+        let dia = carros[i].dia;
+        let mes = carros[i].mes;
         let hora = carros[i].hora;
         let minutos = carros[i].minutos;
 
         carrosResultado.innerHTML += `<tr><td> ${modelo} </td>
                                 <td> ${placa} </td>
+                                <td> ${dia} / ${mes} </td>
                                 <td> ${hora}:${minutos} </td>
                                 <td><button class="btn btn-danger" onclick="apagarVeiculo('${placa}')">Excluir</button></td>
-                                </tr>`
+                                </tr>`;
+        console.log(dia, mes)
+
+    
     }
+
 }
