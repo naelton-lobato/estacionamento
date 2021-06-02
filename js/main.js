@@ -70,7 +70,6 @@ function mostraPatio(){
                                 <td> ${hora}:${minutos} </td>
                                 <td><button class="btn btn-danger" onclick="apagarVeiculo('${placa}')">Excluir</button></td>
                                 </tr>`;
-        console.log(dia, mes)
     }
 }
 
